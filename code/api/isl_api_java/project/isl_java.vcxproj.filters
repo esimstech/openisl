@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\isl_java.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\isl_java.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="postbuild.x64.bat">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="postbuild.x86.bat">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="buildcheader.bat">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="buildjava.bat">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="..\java\src\com\openisl\java\CISLConnect.java" />
+    <None Include="..\java\src\com\openisl\java\CISLData.java" />
+    <None Include="..\java\src\com\openisl\java\CISLDoubleData.java" />
+    <None Include="..\java\src\com\openisl\java\CISLIntData.java" />
+    <None Include="..\java\src\com\openisl\java\CISLStringData.java" />
+  </ItemGroup>
+</Project>

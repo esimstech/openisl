@@ -1,0 +1,15 @@
+1. Copy the entire "python" folder in the folder of your choice
+
+2. Edit the file 00_env.bat to correctly set the OPENISL_PATH environment variable
+
+3. Unzip the file python.zip
+
+4. Run the file 01_install.bat or follow the steps below
+	Installation steps:
+		- Source distribution:
+			- python -m pip install <OpenISL path>/connect/python/OpenISL-Python-API*.zip
+		- Wheel distribution
+			- python -m pip install <OpenISL path>/connect/python/OpenISL-Python-API*.whl
+		Use the option --user for a local installation
+
+5. Start JupyterLab by executing the file 01_jupyterlab.bat
