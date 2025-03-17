@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Model>
+  <Information
+    name="process1"
+    id="{8c4e810f-3df3-4a00-8276-176fa3c9f001}"
+    type="C++">
+  </Information>
+
+  <Cosimulation
+    session="isltokens"
+    starttime="0.0"
+    endtime="30.0"
+    stepsize="1.0">
+  </Cosimulation>
+
+  <Variables>
+    <Variable id="Token1W" name="Token1 Write" causality="output" connectid="C100">
+      <Real initialvalue="1"/>
+    </Variable>
+    <Variable id="Token1R" name="Token1 Read" causality="input" connectid="C300">
+      <Real/>
+    </Variable>
+    <Variable id="Token2W" name="Token2 Write" causality="output" connectid="C101">
+      <Real initialvalue="1"/>
+    </Variable>
+    <Variable id="Token2R" name="Token2 Read" causality="input" connectid="C301">
+      <Real/>
+    </Variable>
+  </Variables>
+
+</Model>

@@ -1,0 +1,63 @@
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+#Microsoft
+.vs/
+*.suo
+*.sdf
+*.opensdf
+*.swp
+.vscode/
+
+#Compilation
+bin/
+obj/
+
+# Python
+.ipynb_checkpoints/
+code/api/isl_api_python/src/build/
+code/api/isl_api_python/src/dist/
+code/api/isl_api_python/src/python/
+code/api/isl_api_python/src/python.zip
+code/api/isl_api_python/src/OpenISL_Python_API.egg-info/
+code/api/isl_api_python/src/openisl/__pycache__/
+
+#Build
+build/x64
+build/x86
+
+#Install
+install/
+
+#Root
+run_cmake.log

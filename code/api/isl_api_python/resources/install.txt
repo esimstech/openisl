@@ -1,0 +1,13 @@
+1. Edit the script 00_create_venv, and update the Python path according to your Python installation
+
+2. Run the script 00_create_venv
+
+3. Edit the script 00_env to correctly set the OPENISL_PATH environment variable if required
+
+4. Run the script 01_install or follow the steps below for an different type of installation
+	Installation steps:
+		- Source distribution:
+			- python -m pip install <OpenISL path>/connect/python/dist/openisl_python_api*.zip
+		- Wheel distribution
+			- python -m pip install <OpenISL path>/connect/python/dist/openisl_python_api*.whl
+		Use the option --user for a local installation

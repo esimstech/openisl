@@ -1,0 +1,8 @@
+To install with OpenModelica:
+----------------------------
+
+1. Open OMEdit
+2. Select the menu Tools->Options
+3. From the Options panel, select the Libraries panel
+4. Add a User Library by selecting the package: <OpenISL installation path>\connect\openmodelica\OpenISL\package.mo
+5. Click Ok, and restart OMEdit

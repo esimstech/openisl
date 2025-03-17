@@ -1,0 +1,20 @@
+To install with any tool:
+-------------------------
+
+Working directory method:
+-------------------------
+Copy the .dll files from <ISL Path>\connect\lua\lib\<x86|x64> into the working directory
+
+Call the library and its functions:
+-----------------------------------
+- Call the library:
+	isl = require("isl_lua")
+- Initialize a new ISL model:
+	local nRet=isl.init("model name", "islsession", dStartTime, dEndTime, dStepSize)
+- Add IOs to the model:
+	local nRet=isl.addio("IO id", "Connection Id", dInitVal, nIsInput (0 = no, 1 = yes))
+- Connect to the ISL session:
+	local nRet=isl.connect()
+- Set and get data:
+    isl.setdata("signal name", value, ani:getFrameTime(), 0 or 1 (wait parameter - default value = 1))
+    local nret, value, rettime=isl.getdata("signal name", ani:getFrameTime(), 0 or 1 (wait parameter - default value = 1))
