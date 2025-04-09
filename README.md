@@ -25,6 +25,8 @@ Use OpenISL for:
 			* LUA Language v5.3.6 (or higher version): Install the dynamic binaries with their headers (https://luabinaries.sourceforge.net/) in the folder of your choice ending with `bin.win64` or `bin.win32` depending on the downloaded version. It is recommended to install both versions. Examples : the DLL lua53.dll and the library in F:\Dev\20_Libraries\lua_5.3.6\bin.w32, and the headers in F:\Dev\20_Libraries\lua_5.3.6\bin.w32\include.
 			* Modelica connector: no prerequisites are required.
 			* OMNet++ connector : no prerequisites are required.
+			* Matlab connector : Matlab 32 bits or 64 bits shall be installed.
+			* Simulink connector : Matlab/Simulink 32 bits or 64 bits shall be installed.
 			
     * On Windows:
         * Built with Visual Studio 2022 community version: https://visualstudio.microsoft.com/fr/vs/older-downloads/

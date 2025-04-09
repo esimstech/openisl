@@ -45,7 +45,6 @@
 #include <boost/uuid/uuid_generators.hpp>
 #include <boost/uuid/uuid_io.hpp>
 #include <boost/process/environment.hpp>
-#include <boost/regex.hpp>
 
 #include <isl_misc.h>
 #include <isl_log.h>
@@ -656,13 +655,13 @@ bool isl::CConnect::SetSessionId(const std::string & sSessionId)
 {
 	if ((m_ucState != 0) && (m_ucState != 1)) {
 		AppLogWarning(ISLCONNECT_CANNOTMODIFY_AFTERCONNECT,
-			"Connector '%s': Cannot modify the connector configuration after connection.", m_sName.c_str());
+			"Connector '%s': Cannot modify the connector configuration after connection.",
+			m_sName.c_str());
 		return false;
 	}
-	// Check the session name
-	const boost::regex cReg("[a-zA-Z]\\w+"); // Shall start with a letter
-	if (boost::regex_match(sSessionId, cReg) == false) {
-		AppLogError(ISLCONNECT_SETSESSION_WRONGFORMAT,
+	// Check the session name : shall start with a letter or underscore
+	if (isl::CString::IsIdentifier(sSessionId) != 0) {
+			AppLogError(ISLCONNECT_SETSESSION_WRONGFORMAT,
 			"Connector '%s': A session shall start with a letter and shall contain only letters,"
 			" digits or underscore characters.", m_sName.c_str());
 		return false;

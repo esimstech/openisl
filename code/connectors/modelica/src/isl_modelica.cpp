@@ -46,7 +46,7 @@
  *     Macros definition
  */
 
-#if 1
+#if 0
 #define LOCAL_DEBUG
 #endif
 
@@ -67,6 +67,8 @@ ISL_MODELICA_EXPORT void * g_cConnect = 0;
  *     Functions definition
  */
 
+
+// TODO : nISLId is not used
 ISL_MODELICA_EXPORT int ISLInitialize(int nISLId, const char * sXMLFile, const char * sSession, const char * sName)
 {
 	isl::CConnect * cConnect;
@@ -85,8 +87,10 @@ ISL_MODELICA_EXPORT int ISLInitialize(int nISLId, const char * sXMLFile, const c
 			delete cConnect;
 			return -3;
 		}
+		// TODO : DLL version already logged in method Load
 		ISLLogInfo(99998, "DLL version: %s", GET_APP_VERSION(VERSION_NUMBER));
 		ISLLogInfo(INFO_XML_LOADED, "File '%s' loaded.", sXMLFile);
+		// TODO : The session identifier could be loaded from the XML file
 		// Set session identifier
 		if (cConnect->SetSessionId(sSession) == false) {
 			ISLLogWarning(WARNING_WRONG_SESSIONID, "The session id '%s' has not been set.", sSession);

@@ -1,12 +1,12 @@
 add_library("isl_lua" SHARED "")
 
-if("${PLATFORM_DIRECTORY}" STREQUAL "x64")
-    set(LUA_BIN_PATH "$ENV{LUA_PATH}/bin.w64")
-else()
-    set(LUA_BIN_PATH "$ENV{LUA_PATH}/bin.w32")
-endif()
-
 if (WIN32)
+    if("${PLATFORM_DIRECTORY}" STREQUAL "x64")
+        set(LUA_BIN_PATH "$ENV{LUA_PATH}/bin.w64")
+    else()
+        set(LUA_BIN_PATH "$ENV{LUA_PATH}/bin.w32")
+    endif()
+
     file(TO_CMAKE_PATH "${LUA_BIN_PATH}/lua53.dll" LUA_RUNTIME)
 endif()
 

@@ -7,7 +7,12 @@
 	"settings": {
         "files.exclude": {
             "build": true,
-            "install": true
-        }
+            "install": true,
+			"dist": true
+        },
+		"workbench.tree.indent": 20,
+		"files.associations": {
+			"vector": "cpp"
+		}
     }
 }

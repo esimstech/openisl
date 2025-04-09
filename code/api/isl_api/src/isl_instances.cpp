@@ -93,17 +93,24 @@ bool isl::CInstances::GetDeleteAll()
 	return m_bDeleteAll;
 }
 
-int isl::CInstances::Add(CConnect * cConnect, const std::string & sUniqueId)
+int isl::CInstances::Add(CConnect * cConnect, std::string & sUniqueId)
 {
 	std::string sId = sUniqueId;
 	if (sId.empty() && cConnect) {
 		sId = cConnect->GetSessionId() + "_" + cConnect->GetId();
+		sUniqueId = sId;
 	}
 	if (cConnect) {
 		m_lConnectors[sId] = cConnect;
 		return m_lConnectors.size() - 1;
 	}
 	return -1;
+}
+
+int isl::CInstances::Add(CConnect* cConnect)
+{
+	std::string sId;
+	return Add(cConnect, sId);
 }
 
 bool isl::CInstances::Remove(const std::string & sUniqueId)

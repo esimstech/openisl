@@ -1,0 +1,8 @@
+set(PUBLIC_FILES
+    "${CMAKE_CURRENT_SOURCE_DIR}/isl_connect.slx"
+    "${CMAKE_CURRENT_SOURCE_DIR}/slblocks.m"
+)
+
+if(PUBLIC_FILES)
+    install(FILES ${PUBLIC_FILES} DESTINATION "bin/${PLATFORM_DIRECTORY}")
+endif()

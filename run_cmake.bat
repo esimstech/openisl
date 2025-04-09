@@ -21,7 +21,7 @@ mkdir install 2> NUL
 
 cd "%ROOT_PATH%\build\x64"
 echo Configuring the x64 platform
-"%CMAKE_PATH%\bin\cmake" -G "Visual Studio 17 2022" -A x64 -D OPENISL_JAVA_API:BOOL=TRUE -D OPENISL_PYTHON_API:BOOL=TRUE -D OPENISL_FMI:BOOL=TRUE -D OPENISL_LUA:BOOL=TRUE -D OPENISL_MODELICA:BOOL=TRUE -D OPENISL_OMNETPP:BOOL=TRUE "%ROOT_PATH%"  > "%ROOT_PATH%\run_cmake.log" 2>&1
+"%CMAKE_PATH%\bin\cmake" -G "Visual Studio 17 2022" -A x64 -D OPENISL_JAVA_API:BOOL=TRUE -D OPENISL_PYTHON_API:BOOL=TRUE -D OPENISL_FMI:BOOL=TRUE -D OPENISL_LUA:BOOL=TRUE -D OPENISL_MODELICA:BOOL=TRUE -D OPENISL_OMNETPP:BOOL=TRUE -D OPENISL_MATLAB:BOOL=TRUE -D OPENISL_SIMULINK:BOOL=TRUE "%ROOT_PATH%"  > "%ROOT_PATH%\run_cmake.log" 2>&1
 echo Building the x64 platform
 "%CMAKE_PATH%\bin\cmake" --build . --config Release  >> "%ROOT_PATH%\run_cmake.log" 2>&1
 echo Installing the x64 platform
@@ -29,7 +29,7 @@ echo Installing the x64 platform
 
 cd "%ROOT_PATH%\build\x86"
 echo Configuring the x86 platform
-"%CMAKE_PATH%\bin\cmake" -G "Visual Studio 17 2022" -A Win32 -D OPENISL_JAVA_API:BOOL=TRUE -D OPENISL_PYTHON_API:BOOL=TRUE -D OPENISL_FMI:BOOL=TRUE -D OPENISL_LUA:BOOL=TRUE -D OPENISL_MODELICA:BOOL=TRUE -D OPENISL_OMNETPP:BOOL=TRUE "%ROOT_PATH%"  >> "%ROOT_PATH%\run_cmake.log" 2>&1
+"%CMAKE_PATH%\bin\cmake" -G "Visual Studio 17 2022" -A Win32 -D OPENISL_JAVA_API:BOOL=TRUE -D OPENISL_PYTHON_API:BOOL=TRUE -D OPENISL_FMI:BOOL=TRUE -D OPENISL_LUA:BOOL=TRUE -D OPENISL_MODELICA:BOOL=TRUE -D OPENISL_OMNETPP:BOOL=TRUE -D OPENISL_MATLAB:BOOL=TRUE -D OPENISL_SIMULINK:BOOL=TRUE "%ROOT_PATH%"  >> "%ROOT_PATH%\run_cmake.log" 2>&1
 echo Building the x86 platform
 "%CMAKE_PATH%\bin\cmake" --build . --config Release  >> "%ROOT_PATH%\run_cmake.log" 2>&1
 echo Installing the x86 platform

@@ -53,7 +53,7 @@ using namespace System::Security::Permissions;
 [assembly:AssemblyConfigurationAttribute(L"")];
 [assembly:AssemblyCompanyAttribute(L"E-Sim Solutions Inc")];
 [assembly:AssemblyProductAttribute(L"isl_cli")];
-[assembly:AssemblyCopyrightAttribute(L"Copyright (c) 2019-2022 E-Sim Solutions Inc")];
+[assembly:AssemblyCopyrightAttribute(L"Copyright (c) 2019-2025 E-Sim Solutions Inc")];
 [assembly:AssemblyTrademarkAttribute(L"")];
 [assembly:AssemblyCultureAttribute(L"")];
 

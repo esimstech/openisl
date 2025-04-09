@@ -82,6 +82,8 @@ namespace isl {
 		static std::string Format(const char * sFormat, ...);
 
 		static std::string Getsha1(const std::string & sIn);
+
+		static int IsIdentifier(const std::string& sIn);
 	};
 
 	class CApplication {

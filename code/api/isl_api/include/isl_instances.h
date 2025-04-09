@@ -77,8 +77,9 @@ namespace isl {
 		void SetDeleteAll(bool bVal);
 		bool GetDeleteAll();
 
-		// If sUniqueId empty => id = session + "_" + "connector_id"
-		int Add(CConnect * cConnect, const std::string & sUniqueId = "");
+		// If sUniqueId empty => id = session + "_" + "connector_id" is returned in the variable
+		int Add(CConnect * cConnect, std::string & sUniqueId);
+		int Add(CConnect* cConnect);
 		bool Remove(const std::string & sUniqueId);
 		bool Delete(const std::string & sUniqueId);
 

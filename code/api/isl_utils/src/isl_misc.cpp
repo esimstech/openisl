@@ -191,6 +191,23 @@ std::string isl::CString::Getsha1(const std::string & sIn)
 	return std::string(sBuf);
 }
 
+int isl::CString::IsIdentifier(const std::string& sIn)
+{
+	for (std::string::size_type i = 0; i < sIn.size(); i++) {
+		if (i == 0) {
+			if ((sIn[i] >= 'a' && sIn[i] <= 'z') || (sIn[i] >= 'A' && sIn[i] <= 'Z') || sIn[i] == '_') {
+				continue;
+			}
+			return -1;
+		}
+		if ((sIn[i] >= 'a' && sIn[i] <= 'z') || (sIn[i] >= 'A' && sIn[i] <= 'Z') || (sIn[i] >= '0' && sIn[i] <= '9') || sIn[i] == '_') {
+			continue;
+		}
+		return -2;
+	}
+	return 0;
+}
+
 /*
  *     Class CApplication
  */
