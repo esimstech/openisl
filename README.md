@@ -12,6 +12,14 @@ For more information on co-simulation: https://en.wikipedia.org/wiki/Co-simulati
 Use OpenISL for:
 * co-simulation ;)
 
+## Simulation Environments connected to OpenISL
+* FMI 2.0 for co-simulation
+* OpenModelica
+* OMNet++
+* LUA scripting
+* Matlab
+* Simulink
+
 ## How to start with OpenISL?
 * Prerequisites:
     * For all platforms:
@@ -80,7 +88,9 @@ cd "%ROOT_PATH%\build\x86"
 * Examples can be executed from the folder `install\examples`
 
 ## Latest release
-* Windows and Linux binaries will be available soon.
+[openisl_win_1_0_0.zip](https://github.com/esimstech/openisl/releases/tag/v1.0.0)  
+  
+***Important Note***: Copy the file `resources\isl_api.ini` to the directory: `%APPDATA%\openisl\`. Modify the existing configuration if necessary.
 
 ## Roadmap summary
 * The roadmap summary will be available soon.
