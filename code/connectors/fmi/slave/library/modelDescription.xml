@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fmiModelDescription
+	fmiVersion="2.0"
+	modelName="islfmuslave"
+	guid="{8678268a-3bea-11eb-b68d-9cb6d0c17957}"
+	version="1.0.0"
+	author="Thierry Roudier"
+	copyright="E-Sim Solutions 2019-2025"
+	license="MIT License"
+	description="OpenISL FMU Slave"
+	generationTool="ISL"
+	generationDateAndTime="2023-03-11T02:53:22Z"
+	variableNamingConvention="structured"
+	numberOfEventIndicators="0">
+
+	<CoSimulation
+		modelIdentifier="islfmuslave"
+		canHandleVariableCommunicationStepSize="true"
+		canInterpolateInputs="false"
+		maxOutputDerivativeOrder="0"
+		canNotUseMemoryManagementFunctions="false"
+		canGetAndSetFMUstate="false"
+		canSerializeFMUstate="false"
+	/>
+
+	<LogCategories>
+		<Category name="logStatusWarning" />
+		<Category name="logStatusError" />
+		<Category name="logAll" />
+		<Category name="logFmi2Call" />
+	</LogCategories>
+
+	<DefaultExperiment startTime="0.0" stopTime="10.0" tolerance="1e-06" stepSize="0.1"/>
+
+	<ModelVariables>
+
+    <ScalarVariable
+			name="WorkingDir"
+      description="Working directory"
+			valueReference="90000"
+			variability="fixed"
+			causality="parameter"
+			initial="exact">
+      <String start=""/>
+    </ScalarVariable>
+
+    <ScalarVariable
+			name="XMLFile"
+      description="XML file path (relative to the working directory)"
+			valueReference="90001"
+			variability="fixed"
+			causality="parameter"
+			initial="exact">
+      <String start="islfmuslave"/>
+    </ScalarVariable>
+
+    <ScalarVariable
+			name="ISLSession"
+      description="ISL session identifier"
+			valueReference="90002"
+			variability="fixed"
+			causality="parameter"
+			initial="exact">
+      <String start="islsession"/>
+    </ScalarVariable>
+
+    <!-- Start to add inputs and outputs here -->
+		<!-- Reference numbers shall be the same as in the FMX file -->
+
+	</ModelVariables>
+	<ModelStructure>
+	</ModelStructure>
+</fmiModelDescription>
+
